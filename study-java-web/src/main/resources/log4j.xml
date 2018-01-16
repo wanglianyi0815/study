@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- - Copyright 1999-2011 Alibaba Group. - - Licensed under the Apache License, 
+	Version 2.0 (the "License"); - you may not use this file except in compliance 
+	with the License. - You may obtain a copy of the License at - - http://www.apache.org/licenses/LICENSE-2.0 
+	- - Unless required by applicable law or agreed to in writing, software - 
+	distributed under the License is distributed on an "AS IS" BASIS, - WITHOUT 
+	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. - See the 
+	License for the specific language governing permissions and - limitations 
+	under the License. -->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{YY/MM/dd hh:mm:ss:SSS}][%X{clientid}][%X{context}][%3p] %c{1}.%M: %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="root" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log4j.path}/root.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{YY/MM/dd hh:mm:ss:SSS}][%X{clientid}][%X{context}][%3p] %c{1}.%M: %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="sql" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log4j.path}/sql.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{YY/MM/dd hh:mm:ss:sss}][%X{clientid}][%X{context}][%3p] %c{1}.%M: %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="zdal" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log4j.path}/zdal.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{YY/MM/dd hh:mm:ss:SSS}][%X{clientid}][%X{context}][%3p] %c{1}.%M: %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="mq" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log4j.path}/mq.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{YY/MM/dd hh:mm:ss:SSS}][%X{clientid}][%X{context}][%3p] %c{1}.%M: %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 日志打印SQL -->
+	<logger name="com.ibatis" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="sql"/>
+	</logger>
+	<logger name="java.sql.Connection" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="sql"/>
+	</logger>
+
+	<!-- mq消费者日志 -->
+	<logger name="com.jiedaibao.paypre.mq.MetaQEventClient" additivity="true">
+		<level value="INFO" />
+		<appender-ref ref="mq"/>
+	</logger>
+
+	<!-- zdal日志 -->
+	<logger name="com.alipay.zdal" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="zdal"/>
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="root" />
+	</root>
+</log4j:configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+	<person psersonid="P01">
+		<name>zhangsan</name>
+		<address>beijing</address>
+		<phone>135555555</phone>
+	</person>
+	<person psersonid="P02">
+		<name>lisi</name>
+		<address>shanghai</address>
+		<phone>135555555</phone>
+	</person>
+	<person psersonid="P03">
+		<name>wangwu</name>
+		<address>huoxing</address>
+		<phone>135555555</phone>
+	</person>
+	<person psersonid="P04">
+		<name>zhaoliu</name>
+		<address>diqiu</address>
+		<phone>135555555</phone>
+	</person>
+</people>

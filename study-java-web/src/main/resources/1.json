@@ -1,0 +1,102 @@
+{
+  "msg": "SUCCESS",
+  "code": 0,
+  "data": {
+    "voucherId": "c30d1f77904a43a2b440e862046ac7dc",
+    "uid": 6957684,
+    "voucherStatus": 1,
+    "voucherStartTime": "2018-01-11 00:00:00",
+    "voucherEndTime": "2018-02-09 23:59:55",
+    "obtainChannel": "1001",
+    "version": 1,
+    "vouchersRulesId": "39749edc188f4a8e896fc22d775ee974",
+    "activityId": "SD1515653719406",
+    "createTime": "2018-01-11 14:55:19",
+    "remind": 0,
+    "useNum": 1,
+    "marketVouchersRules": {
+      "vouchersRulesId": "39749edc188f4a8e896fc22d775ee974",
+      "vouchersCode": "0",
+      "vouchersTitle": "指定商品满额现金券",
+      "vouchersOrCode": 1,
+      "vouchersType": 1,
+      "vouchersMoneyCode": "CNY",
+      "vouchersDiscountMoney": 100.0,
+      "useConditionsType": 2,
+      "useConditionsMoney": 200.0,
+      "vouchersValidityDay": 30,
+      "userUseNum": 1,
+      "isDeadlineNotice": 0,
+      "useScopeType": 2,
+      "vouchersStatus": 1,
+      "vouchersDesc": "",
+      "vouchersCreateTime": "2017-10-31 02:14:37",
+      "vouchersUpdateTime": "2017-10-31 02:14:37",
+      "channelId": "0",
+      "usePlatform": "0",
+      "userId": 1,
+      "userName": "Jarvis",
+      "vouchersValidityTimeType": 1,
+      "businessType": 1001,
+      "systemType": 100101,
+      "isAvailableOrNotuse": 0,
+      "scopes": [
+        {
+          "scopeId": "4d4fff9194e945998bc4574c2f9421e1",
+          "classId": "115",
+          "className": "普通实物商品",
+          "goodsId": "642",
+          "goodsName": "【5折限量】第三届中国体育产业论坛",
+          "price": 999.0,
+          "createTime": "2017-10-31 02:14:37",
+          "updateTime": "2017-10-31 02:14:37",
+          "vouchersRulesId": "39749edc188f4a8e896fc22d775ee974"
+        },
+        {
+          "scopeId": "501fac0a71b040709000846331128159",
+          "classId": "107",
+          "className": "纸媒\t财新图书",
+          "goodsId": "630",
+          "goodsName": "【新书】中国做对了什么   周其仁著",
+          "price": 45.0,
+          "createTime": "2017-10-31 02:14:37",
+          "updateTime": "2017-10-31 02:14:37",
+          "vouchersRulesId": "39749edc188f4a8e896fc22d775ee974"
+        },
+        {
+          "scopeId": "8392c6881f704fd2b937efa165ea8182",
+          "classId": "115",
+          "className": "普通实物商品",
+          "goodsId": "619",
+          "goodsName": "[财新Design]-紫檀书签套装",
+          "price": 188.0,
+          "createTime": "2017-10-31 02:14:37",
+          "updateTime": "2017-10-31 02:14:37",
+          "vouchersRulesId": "39749edc188f4a8e896fc22d775ee974"
+        },
+        {
+          "scopeId": "fdd0d2638fa448dcbb07c33c136446e3",
+          "classId": "115",
+          "className": "普通实物商品",
+          "goodsId": "626",
+          "goodsName": "第八届财新峰会，优惠独享",
+          "price": 5800.0,
+          "createTime": "2017-10-31 02:14:37",
+          "updateTime": "2017-10-31 02:14:37",
+          "vouchersRulesId": "39749edc188f4a8e896fc22d775ee974"
+        }
+      ]
+    }
+  }
+}
+
+
+public static void main(String[] args){
+MallOrderBizImpl mallOrderBiz=new MallOrderBizImpl();
+JSONArray jsonArray=JSON.parseArray("[{\"vouchersRulesId\":\"b431d7535f48440b85ea497c19518e4c\",\"scopeId\":\"111c97efefe344c0afe105537cfe8b5b\",\"classId\":\"78\",\"createTime\":\"2018-01-11 07:50:02\",\"goodsId\":\"653\",\"price\":498.0,\"className\":\"数字版\",\"updateTime\":\"2018-01-11 07:50:02\",\"goodsName\":\"财新通一年\"},{\"vouchersRulesId\":\"b431d7535f48440b85ea497c19518e4c\",\"scopeId\":\"9677631a7ca942d29be7525cf18a9af7\",\"classId\":\"115\",\"createTime\":\"2018-01-11 07:50:02\",\"goodsId\":\"642\",\"price\":999.0,\"className\":\"普通实物商品\",\"updateTime\":\"2018-01-11 07:50:02\",\"goodsName\":\"【5折限量】第三届中国体育产业论坛\"}]");
+OrdDetail ordDetail=JSON.parseObject("{\"amt\":498,\"cateId\":78,\"cateName\":\"数字版\",\"goodsId\":653,\"goodsImage\":\"data/files/store_6893260/goods_80/201710301648001850.jpg\",\"goodsName\":\"财新通一年\",\"goodsType\":0,\"ifSale\":0,\"introduce\":\"<div class=\\\"list\\\">\\r\\n<h4><img src=\\\"http://shop.caixin.com/data/files/store_6893260/goods_153/201710301649132126.jpg\\\" alt=\\\"财新通.jpg\\\" /><br /></h4>\\r\\n<div class=\\\"listCon\\\">\\r\\n<ul>\\r\\n<li><dl></dl></li>\\r\\n</ul>\\r\\n</div>\\r\\n</div>\",\"itemType\":1,\"monthNum\":12,\"price\":498,\"quantity\":1,\"sellerId\":6893260,\"specDesc\":\"\",\"specId\":987,\"storeGroup\":127,\"subTerm\":1}",OrdDetail.class);
+boolean flag=mallOrderBiz.calCouponScopeFlag(2,0,jsonArray,ordDetail);
+System.out.println(flag);
+System.out.println(ordDetail.getAmt());
+
+}

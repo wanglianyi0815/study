@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdpay>
+    <amount>2</amount>
+    <callbackUrl>http://www.baidu.com</callbackUrl>
+    <currency>CNY</currency>
+    <expireTime>7200</expireTime>
+    <merchant>110295803002</merchant>
+    <notifyUrl>http://gateway.caixin.com/api/pay/JDPay/successNotify</notifyUrl>
+    <orderType>0</orderType>
+    <tradeDesc>购买2222</tradeDesc>
+    <tradeName>向财新传媒付款</tradeName>
+    <tradeNum>C2017060214453131687</tradeNum>
+    <tradeTime>20170602144531</tradeTime>
+    <version>V2.0</version>
+</jdpay>

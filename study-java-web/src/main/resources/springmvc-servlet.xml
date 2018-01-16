@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bean头部 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd              
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	
+	<mvc:annotation-driven />
+	<context:component-scan base-package="com.wly.foreground1.controller" />
+
+	<!--<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	
+	<mvc:interceptors>-->
+		<!--<mvc:interceptor>-->
+
+			<!--<mvc:mapping path="/card/**"/>-->
+			<!--<mvc:mapping path="/consume/**" />-->
+			<!--&lt;!&ndash;<mvc:mapping path="/ScanCodePay/**" />&ndash;&gt;-->
+			<!--<mvc:mapping path="/finance/**" />-->
+			<!--&lt;!&ndash;<mvc:mapping path="/sequence/**" />&ndash;&gt;-->
+			<!--<bean class="AppKeyInterceptor">-->
+			<!--</bean>-->
+		<!--</mvc:interceptor>-->
+
+
+		 <!--web 跨域拦截器-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**"/>-->
+			<!--<bean class="com.jiedaibao.payfront.base.common.CORSInterceptor">-->
+			<!--</bean>-->
+		<!--</mvc:interceptor>-->
+
+	<!--</mvc:interceptors>-->
+
+</beans>
