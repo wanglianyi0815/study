@@ -15,10 +15,10 @@ package com.test.algorithm.sorting;
  * 所以堆排序有两个函数组成。一是建堆的渗透函数，二是反复调用渗透函数实现排序的函数。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class HeapSort {
+public class N4HeapSort {
     public static void main(String[] args) {
         int[] a={49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
-        HeapSort obj = new HeapSort();
+        N4HeapSort obj = new N4HeapSort();
         System.out.println("初始值：");
         obj.print(a);
         System.out.println();

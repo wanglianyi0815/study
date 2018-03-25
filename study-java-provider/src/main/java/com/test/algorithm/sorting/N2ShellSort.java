@@ -9,7 +9,7 @@ package com.test.algorithm.sorting;
  * 3、每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class ShellSort {
+public class N2ShellSort {
     /**
      * 算法实现:
      * 我们简单处理增量序列：增量序列d = {n/2 ,n/4, n/8 .....1} n为要排序数的个数
@@ -19,7 +19,7 @@ public class ShellSort {
      */
     public static void main(String[] args) {
         int a[] = {3, 1, 5, 7, 2, 4, 9, 6, 10, 8};
-        ShellSort obj = new ShellSort();
+        N2ShellSort obj = new N2ShellSort();
         System.out.println("初始值：");
         obj.print(a);
         obj.shellSort(a);

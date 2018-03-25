@@ -11,10 +11,10 @@ import java.util.List;
  * 这样从最低位排序一直到最高位排序完成以后,数列就变成一个有序序列。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class RadixSort {
+public class N8RadixSort {
     public static void main(String[] args) {
         int a[] = {49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35, 25, 53, 51};
-        RadixSort obj = new RadixSort();
+        N8RadixSort obj = new N8RadixSort();
         System.out.println("初始值：");
         obj.print(a);
         System.out.println();

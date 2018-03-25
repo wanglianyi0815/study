@@ -1,7 +1,5 @@
 package com.test.algorithm.sorting;
 
-import java.util.Arrays;
-
 /**
  * 7、归并排序
  * 基本思想：
@@ -10,10 +8,10 @@ import java.util.Arrays;
  * 然后再把有序子序列合并为整体有序序列。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class MergeSort {
+public class N7MergeSort {
     public static void main(String[] args) {
         int a[] = {49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35, 25, 53, 51};
-        MergeSort obj = new MergeSort();
+        N7MergeSort obj = new N7MergeSort();
         System.out.println("初始值：");
         obj.print(a);
         System.out.println();

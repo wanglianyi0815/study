@@ -7,11 +7,11 @@ package com.test.algorithm.sorting;
  * 然后在剩下的数当中再找最小（或者最大）的与第2个位置的数交换，依次类推，直到第n-1个元素（倒数第二个数）和第n个元素（最后一个数）比较为止。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class SimpleSelectSort {
+public class N3SimpleSelectSort {
 
     public static void main(String[] args) {
         int a[] = {3,1,5,7,2,4,9,6,10,8};
-        SimpleSelectSort  obj=new SimpleSelectSort();
+        N3SimpleSelectSort obj=new N3SimpleSelectSort();
         System.out.println("初始值：");
         obj.print(a);
         obj.selectSort(a);
