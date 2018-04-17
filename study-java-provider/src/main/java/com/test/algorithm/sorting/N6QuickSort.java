@@ -8,11 +8,11 @@ package com.test.algorithm.sorting;
  * 此时基准元素在其排好序后的正确位置,然后再用同样的方法递归地排序划分的两部分。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class QuickSort {
+public class N6QuickSort {
 
     public static void main(String[] args) {
         int a[] = {49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35, 25, 53, 51};
-        QuickSort obj = new QuickSort();
+        N6QuickSort obj = new N6QuickSort();
         System.out.println("初始值：");
         obj.print(a);
         System.out.println();

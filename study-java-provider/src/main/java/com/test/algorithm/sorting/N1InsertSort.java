@@ -9,11 +9,11 @@ package com.test.algorithm.sorting;
  * 所以，相等元素的前后顺序没有改变，从原无序序列出去的顺序就是排好序后的顺序，所以插入排序是稳定的。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class InsertSort {
+public class N1InsertSort {
     //时间复杂度:时间复杂度：O（n^2）.
     public static void main(String[] args) {
         int a[] = {3,1,5,7,2,4,9,6,10,8};
-        InsertSort  obj=new InsertSort();
+        N1InsertSort obj=new N1InsertSort();
         System.out.println("初始值：");
         obj.print(a);
         obj.insertSort(a);
@@ -31,7 +31,6 @@ public class InsertSort {
             if(a[i]<a[i-1]){
                 int j;
                 int x=a[i];//x为待插入元素
-                a[i]=a[i-1];
                 for(j=i-1;  j>=0 && x<a[j];j--){//通过循环，逐个后移一位找到要插入的位置。
                     a[j+1]=a[j];
                 }

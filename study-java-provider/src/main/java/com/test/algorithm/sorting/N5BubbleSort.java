@@ -7,11 +7,11 @@ package com.test.algorithm.sorting;
  * 即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
  * Created by wanglianyi on 2017/4/26 0026.
  */
-public class BubbleSort {
+public class N5BubbleSort {
 
     public static void main(String[] args) {
         int a[] = {3, 1, 5, 7, 2, 4, 9, 6, 10, 8};
-        BubbleSort obj = new BubbleSort();
+        N5BubbleSort obj = new N5BubbleSort();
         System.out.println("初始值：");
         obj.print(a);
         obj.bubbleSort(a);
